@@ -1,15 +1,13 @@
-# Usar la imagen oficial de n8n
 FROM n8nio/n8n:latest
 
-# Configurar la zona horaria
+# Set timezone
 ENV GENERIC_TIMEZONE=America/Lima
 ENV TZ=America/Lima
 
-# Directorio para persistencia (Railway lo gestiona como volumen automático)
+# Persist data in /data (Koyeb assigns a persistent volume)
 ENV N8N_USER_FOLDER=/data
 
-# Exponer el puerto de n8n
+# n8n runs on port 5678 internally
 EXPOSE 5678
 
-# Comando por defecto
 CMD ["n8n"]

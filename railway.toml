@@ -1,7 +1,0 @@
-[build]
-nixpacks = false
-dockerfile = "Dockerfile"
-
-[deploy]
-startCommand = "npx n8n"
-
