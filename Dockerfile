@@ -1,10 +1,7 @@
 FROM n8nio/n8n:latest
 
-# Timezone
 ENV GENERIC_TIMEZONE=America/Lima
 ENV TZ=America/Lima
+ENV N8N_USER_FOLDER=/data
 
-# Expose n8n port
 EXPOSE 5678
-
-CMD ["n8n"]
